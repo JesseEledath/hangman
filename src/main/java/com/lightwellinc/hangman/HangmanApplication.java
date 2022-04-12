@@ -11,13 +11,14 @@ public class HangmanApplication
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		SpringApplication.run(HangmanApplication.class, args);
-		game();
+		String word = game();
+		System.out.println(word);
 	}
 
-	public static void game() throws IOException, InterruptedException {
+	public static String game() throws IOException, InterruptedException {
 		GetApi api = new GetApi();
 		String word = api.GetApi();
-		System.out.println(word);
+		return word;
 	}
 
 }
